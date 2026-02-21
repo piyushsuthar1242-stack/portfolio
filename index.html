@@ -1,263 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Piyush Suthar | Pro Developer</title>
+<title>Piyush Suthar | Frontend Developer</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
-scroll-behavior:smooth;
-}
-
 body{
-background:#0f2027;
-color:white;
-transition:0.4s;
-overflow-x:hidden;
-}
-
-.light{
-background:#f4f4f4;
-color:#111;
+margin:0;
+font-family:Arial, sans-serif;
+background:#f9f9f9;
+color:#333;
+line-height:1.6;
 }
 
 header{
+background:#111;
+color:white;
+padding:60px 20px;
 text-align:center;
-padding:100px 20px;
-position:relative;
 }
 
-h1{
-font-size:50px;
-color:#00f7ff;
+header h1{
+margin:0;
+font-size:42px;
 }
 
-.light h1{
-color:#0077ff;
-}
-
-.btn{
-display:inline-block;
-margin:10px;
-padding:12px 25px;
-background:#00f7ff;
-color:black;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-transition:0.3s;
-border:none;
-cursor:pointer;
-}
-
-.btn:hover{
-transform:scale(1.1);
+header p{
+opacity:0.8;
+margin-top:10px;
 }
 
 section{
-max-width:1000px;
+max-width:900px;
 margin:40px auto;
-padding:40px;
-background:rgba(255,255,255,0.05);
-border-radius:20px;
-backdrop-filter:blur(10px);
-}
-
-.light section{
-background:white;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
+padding:20px;
 }
 
 h2{
-margin-bottom:20px;
-color:#00f7ff;
+border-bottom:2px solid #111;
+padding-bottom:5px;
+margin-bottom:15px;
 }
 
-.cards{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content:center;
+.projects div{
+background:#ffffff;
+padding:15px;
+margin:15px 0;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 
-.card{
-background:rgba(255,255,255,0.1);
-padding:20px;
-border-radius:20px;
-width:250px;
-text-align:center;
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-.counter-box{
-display:flex;
-justify-content:space-around;
-text-align:center;
-margin-top:20px;
-}
-
-.counter{
-font-size:40px;
-color:#00f7ff;
-}
-
-.contact input,
-.contact textarea{
-width:100%;
-padding:10px;
-margin:10px 0;
-border:none;
-border-radius:10px;
-}
-
-.toggle{
-position:fixed;
-top:20px;
-right:20px;
-cursor:pointer;
-background:#00f7ff;
-padding:8px 15px;
-border-radius:20px;
-color:black;
-font-weight:bold;
+ul{
+padding-left:20px;
 }
 
 footer{
+background:#111;
+color:white;
 text-align:center;
-padding:30px;
-opacity:0.7;
+padding:20px;
+margin-top:40px;
 }
-
-/* Floating particles */
-.circle{
-position:absolute;
-border-radius:50%;
-background:rgba(0,247,255,0.3);
-animation:float 10s infinite linear;
-}
-
-@keyframes float{
-from{transform:translateY(0);}
-to{transform:translateY(-1000px);}
-}
-
 </style>
 </head>
 
 <body>
 
-<div class="toggle" onclick="toggleMode()">Mode</div>
-
 <header>
 <h1>Piyush Suthar</h1>
-<p>Creative Web Developer | Future Software Engineer</p>
-<a href="#projects" class="btn">View Projects</a>
-<a href="cv.pdf" class="btn" download>Download CV</a>
+<p>Frontend Web Developer | HTML • CSS • JavaScript</p>
 </header>
 
 <section>
 <h2>About Me</h2>
-<p>I build modern, animated and responsive websites with clean UI and smooth experience.</p>
+<p>
+I am a Frontend Web Developer skilled in HTML, CSS and JavaScript. 
+I build responsive and user-friendly websites with clean design and modern layout. 
+I am passionate about learning new technologies and improving my development skills.
+</p>
 </section>
 
-<section id="projects">
+<section>
 <h2>Projects</h2>
-<div class="cards">
-<div class="card">Event Registration Website</div>
-<div class="card">Admin Dashboard Panel</div>
-<div class="card">Personal Portfolio</div>
+
+<div>
+<strong>Event Registration Website</strong><br>
+Developed using HTML, CSS and Firebase to collect and manage user registration data efficiently.
 </div>
+
+<div>
+<strong>Admin Dashboard Panel</strong><br>
+Created a structured admin interface to view and manage event registrations.
+</div>
+
+<div>
+<strong>Personal Portfolio Website</strong><br>
+Designed and deployed a responsive personal portfolio using GitHub and Netlify.
+</div>
+
 </section>
 
 <section>
-<h2>Achievements</h2>
-<div class="counter-box">
-<div>
-<div class="counter" data-target="15">0</div>
-<p>Projects</p>
-</div>
-<div>
-<div class="counter" data-target="10">0</div>
-<p>Certificates</p>
-</div>
-<div>
-<div class="counter" data-target="100">0</div>
-<p>Happy Users</p>
-</div>
-</div>
+<h2>Skills</h2>
+<ul>
+<li>HTML5</li>
+<li>CSS3</li>
+<li>JavaScript</li>
+<li>Firebase</li>
+<li>Git & GitHub</li>
+<li>Responsive Web Design</li>
+</ul>
 </section>
 
 <section>
-<h2>Contact Me</h2>
-
-<form name="contact" method="POST" data-netlify="true">
-<input type="hidden" name="form-name" value="contact">
-
-<div class="contact">
-<input type="text" name="name" placeholder="piyush suthar" required>
-<input type="email" name="email" placeholder="official.piyushsuthardev9@gmail.com" required>
-<textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-<button type="submit" class="btn">Send Message</button>
-</div>
-</form>
-
+<h2>Contact</h2>
+<p>Email: piyushsuthar@email.com</p>
+<p>Portfolio: https://piyushsuthar.netlify.app</p>
 </section>
 
 <footer>
 © 2026 Piyush Suthar | All Rights Reserved
 </footer>
-
-<script>
-// Dark mode save
-if(localStorage.getItem("mode") === "light"){
-document.body.classList.add("light");
-}
-
-function toggleMode(){
-document.body.classList.toggle("light");
-localStorage.setItem("mode",
-document.body.classList.contains("light") ? "light" : "dark");
-}
-
-// Counter animation
-const counters=document.querySelectorAll(".counter");
-counters.forEach(counter=>{
-counter.innerText="0";
-const update=()=>{
-const target=+counter.getAttribute("data-target");
-const count=+counter.innerText;
-const increment=target/100;
-if(count<target){
-counter.innerText=Math.ceil(count+increment);
-setTimeout(update,20);
-}else{
-counter.innerText=target;
-}
-};
-update();
-});
-
-// Floating circles
-for(let i=0;i<15;i++){
-let circle=document.createElement("div");
-circle.classList.add("circle");
-circle.style.width=Math.random()*50+"px";
-circle.style.height=circle.style.width;
-circle.style.left=Math.random()*100+"%";
-circle.style.bottom="-50px";
-circle.style.animationDuration=(5+Math.random()*5)+"s";
-document.body.appendChild(circle);
-}
-</script>
 
 </body>
 </html>
